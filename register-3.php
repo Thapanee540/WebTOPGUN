@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<?php
+		include("DB/registerTopkan.php");
+	?>
+
+<head>
+	<title>ลงทะเบียน TESA TOP GUN</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico" /> -->
+	<link rel="icon" type="image/jpg" href="images/tesa.jpg" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main-2.css">
+	<!--===============================================================================================-->
+	<link href="https://fonts.googleapis.com/css?family=Kanit|Prompt" rel="stylesheet">
+</head>
+<style>
+	
+</style>
+
+<body>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<!-- <div class="login100-pic js-tilt" data-tilt>
+					<img src="images/tesa.jpg" alt="IMG">
+				</div> -->
+
+				<form class="login100-form validate-form" action="information.php" method="POST">
+					<span class="login100-form-title">
+					<!-- <span class="#"> -->
+						ลงทะเบียน TESA TOP GUN Rally 
+						
+					</span>
+					<span class="login101-form-title">
+						ทีม : 
+						<?php
+							echo $_POST["Team"];
+						?>
+					</span>
+
+					<table>
+						<tr>
+							<td>ประเภททีม : </td>
+							<td>
+							<div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่อทีม !!! ">
+								<input class="input100" type="text" name="Teamtype" id="Teamtype" placeholder="ประเภททีม">
+								
+								<span class="focus-input100"></span>
+								<span class="symbol-input100">
+									<i class="fa fa-users" aria-hidden="true"></i>
+								</span>
+							</div> </td>
+						</tr>
+						<tr>
+							<td>มหาวิทยาลัย : </td>
+							<td>
+							<div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่อมหาวิทยาลัย ">
+								<input class="input100" name="University" list="University"  placeholder="มหาวิทยาลัย...">
+								<datalist id="University">    								
+									 <?php 
+										$read = fopen('university.txt','r');
+										while($line = fgets($read)){
+											echo "<option value=". $line.">"."<br>";
+										}
+									?>
+  								</datalist>								 
+								<span class="focus-input100"></span>	
+								<span class="symbol-input100">					
+									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+								</span>
+							</div> </td>
+						</tr>
+
+						<tr>
+							<td>จำนวนสมาชิก : </td>
+							<td> 
+								<div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่อมหาวิทยาลัย ">
+									<!-- <input class="input100" name="University"  placeholder="มหาวิทยาลัย..."> -->
+										<select  class="input100" name="Member" id="Member"> 
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>										
+  										</select>				 
+														
+						
+								</div>
+							 </td>
+						</tr>
+
+						<tr>
+							<td>อาจารย์ที่ปรึกษา : </td>
+							<td>
+							<div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่ออาจารย์ที่ปรึกษา">
+								<input class="input100" type="text" name="Adviser" id="Adviser" placeholder="ชื่ออาจารย์ที่ปรึกษา">
+								
+								<span class="focus-input100"></span>
+								<span class="symbol-input100">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								</span>
+							</div> </td>
+						</tr>
+
+						<tr>
+							<td>E-mail หัวหน้าทีม : </td>
+							<td>
+							<div class="wrap-input100 validate-input" data-validate="กรุณากรอก email หัวหน้าทีม">
+								<input class="input100" type="text" name="Email" id="Email" placeholder="example@example.xyz">
+								
+								<span class="focus-input100"></span>
+								<span class="symbol-input100">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								</span>
+							</div> </td>
+						</tr>
+					</table>
+					
+
+					<div class="container-login100-form-btn" style="padding-bottom:50px">
+						<button class="login100-form-btn" type="submit">
+										ไปหน้าถัดไป
+						</button>
+					</div>
+
+					
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
