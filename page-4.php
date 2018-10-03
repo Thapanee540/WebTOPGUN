@@ -3,8 +3,7 @@
 <?php
 	session_start();
 	// echo $_SESSION['Team_Name'];
-	include('DB/session_page4.php');
-// include("conn/conn.php");
+	include('DB/session_page3.php');
 
 ?>
 <head>
@@ -149,7 +148,7 @@
 							<td>เบอร์โทรศัพท์มือถือ : </td>
 							<td>								
 								<div class="wrap-input100 validate-input" data-validate="กรุณากรอกเบอร์โทร">
-									<input class="input100" pattern="^0([8|9|6])([0-9]{8}$)" type="text" name="Tell" id="Tell" placeholder="0xx-xxx-xxxx" title="ex. 09/06/08xxxxx123">								
+									<input class="input100" maxlength="10" pattern="^0([8|9|6])([0-9]{8}$)" type="text" name="Tell" id="Tell" placeholder="0xx-xxx-xxxx" title="ex. 09/06/08xxxxx123">								
 									<span class="focus-input100"></span>										
 								</div> 									
 							</td>		

@@ -3,8 +3,7 @@
 	<?php
 	session_start();
 	require_once("DB/createLogin-DB.php");
-	// include('DB/session_info.php');
-	// echo $rows;
+	// include('DB/session_page3.php');
 		
 	?>
 

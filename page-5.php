@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-	session_start();
-	// echo $_SESSION['Team_Name'];
-// include("conn/conn.php");
-    require_once('DB/session_info.php');
-    echo $_SESSION['Team_Type'];
-?>
+    <?php
+	    session_start();
+	    include('DB/session_page4.php');
+		
+	?>
 <head>
 	<title>ลงทะเบียน TESA TOP GUN</title>
 	<meta charset="UTF-8">

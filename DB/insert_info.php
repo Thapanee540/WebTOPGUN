@@ -2,7 +2,10 @@
 include_once("conn/conn.php");
 // session_start();
 
-  $Team_Name = $Team_Pass = "";
+  $Team_Name ="";
+  $Team_Type = $University = $Member = $Adviser = $Email = "";
+  
+  $Team_Name = $_SESSION["Team_Name"];
 
   // page 3
   $Team_Type = $_SESSION["Team_Type"] ;
@@ -10,6 +13,8 @@ include_once("conn/conn.php");
   $Member = $_SESSION["Member"] ;
   $Adviser = $_SESSION["Adviser"] ;
   $Email = $_SESSION["Email"] ;  
+
+  $Pic = $Tiltle = $NameThai = $NameEng = $NickName = $Tell = $BirthDay =  $SizeShirt = $Food = $FoodAllergies = $Province = $HowManySisBro =  $YourRank = "";
 
   // page 4
   $Pic = $_SESSION["Pic"] ;
@@ -26,6 +31,8 @@ include_once("conn/conn.php");
   $HowManySisBro = $_SESSION["HowManySisBro"] ;  
   $YourRank = $_SESSION["YourRank"] ;
 
+  $NameSchool = $MajorSchool = $University = $Major = $Level = $_POST["GPA"] = $SubFavorite = $SubUnprofessional =         $AbilityOutstanding = $WhyChoose = "";
+
   // page 5
   $NameSchool = $_SESSION["NameSchool"] ;
   $MajorSchool = $_SESSION["MajorSchool"] ;
@@ -38,6 +45,8 @@ include_once("conn/conn.php");
   $AbilityOutstanding = $_SESSION["AbilityOutstanding"] ;
   $WhyChoose = $_SESSION["WhyChoose"] ;    
     
+  $PlanAfterSchool = $MajorSchool = $ClarifyPlan = $LookFuture = $WorldInvention = ""; 
+
   // page 6
   $PlanAfterSchool = $_SESSION["PlanAfterSchool"] ;
   $MajorSchool = $_SESSION["MajorSchool"];
@@ -45,10 +54,14 @@ include_once("conn/conn.php");
   $LookFuture = $_SESSION["LookFuture"] ;
   $WorldInvention = $_SESSION["WorldInvention"]; 
     
+  $YourIdolWhoWhy = $YourMotto = $HowToManager = "";
+
   ///page 7  
   $YourIdolWhoWhy = $_SESSION["YourIdolWhoWhy"] ;
   $YourMotto = $_SESSION["YourMotto"] ;
   $HowToManager = $_SESSION["HowToManager"] ;
+
+  $Feeling = $inspiration = $Featured = $expectation = $knowledge = "";
 
   /// page 8  
   $Feeling = $_SESSION["Feeling"] ;
@@ -78,12 +91,13 @@ $row_login = mysqli_fetch_array($result_login);
 $ID_team = $row_login["ID"];
 
 //insert data
-$sql_team_register = "INSERT INTO team_register(ID_team, Team_Type, Team_Name, University, Member, Adviser, Email)
-VALUES ($ID_team,[value-2],[value-3],[value-4],[value-5],[value-6],[value-7])";
+$sql_team_register = "INSERT INTO 
+team_register(ID_team, Team_Type, Team_Name, University, Member, Adviser, Email)
+VALUES ($ID_team, &Team_Type, &Team_Name, &University, &Member, &Adviser, &Email)";
 
 
 $sql_team_info = "INSERT INTO team_info(ID, Team_ID, Pic, Email, Tiltle, NameThai, NameEng, NickName, Tell, BirthDay, SizeShirt, Food, FoodAllergies, Province, HowManySisBro, YourRank, NameSchool, MajorSchool, University, Major, Level, GPA, SubFavorite, SubUnprofessional, AbilityOutstanding, WhyChoose, PlanAfterSchool, ClarifyPlan, LookFuture, WorldInvention, YourIdolWhoWhy, YourMotto, HowToManager, Feeling, inspiration, Featured, expectation, knowledge, Daystartcamp) 
-VALUES (NUll,$ID_team,[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11],[value-12],[value-13],[value-14],[value-15],[value-16],[value-17],[value-18],[value-19],[value-20],[value-21],[value-22],[value-23],[value-24],[value-25],[value-26],[value-27],[value-28],[value-29],[value-30],[value-31],[value-32],[value-33],[value-34],[value-35],[value-36],[value-37],[value-38],[value-39])";
+VALUES (NUll,$ID_team, $Pic, $Email, $Tiltle, $NameThai, $NameEng, $NickName, $Tell, $BirthDay, $SizeShirt, $Food,         $FoodAllergies, $Province, $HowManySisBro, $YourRank, $NameSchool, $MajorSchool, $University, $Major, $Level, $GPA,      $SubFavorite, $SubUnprofessional, $AbilityOutstanding, $WhyChoose, $PlanAfterSchool, $ClarifyPlan, $LookFuture,          $WorldInvention, $YourIdolWhoWhy, $YourMotto, $HowToManager, $Feeling, $inspiration, $Featured, $expectation, $knowledge, $Daystartcamp)";
 
 
 

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include("conn/conn.php");
-?>
+	    session_start();
+	    include('DB/session_page6.php');
+		
+	?>
 <head>
 	<title>ลงทะเบียน TESA TOP GUN</title>
 	<meta charset="UTF-8">

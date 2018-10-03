@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include("conn/conn.php");
+session_start();
+include('DB/session_page7.php');
 ?>
 <head>
 	<title>ลงทะเบียน TESA TOP GUN</title>
@@ -36,7 +37,7 @@ include("conn/conn.php");
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="DayStartCamp.php" method="POST">
+				<form class="login100-form validate-form" action="page-9-success.php" method="POST">
 					
 					<span class="login101-form-title">
 						ทีม : 

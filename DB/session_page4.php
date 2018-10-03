@@ -2,8 +2,8 @@
 
     $_SESSION["Pic"] = $_POST["Pic"];
     $_SESSION["Tiltle"] = $_POST["Tiltle"];
-    $_SESSION["NameThai"] = $_POST["NameThai"] + " " +$_POST["LastnameThai"];
-    $_SESSION["NameEng"] = $_POST["NameEng"]+ " " +$_POST["LastnameEng"];
+    $_SESSION["NameThai"] = $_POST["NameThai"] ." " .$_POST["LastnameThai"];
+    $_SESSION["NameEng"] = $_POST["NameEng"]." " .$_POST["LastnameEng"];
     $_SESSION["NickName"] = $_POST["NickName"];
     $_SESSION["Tell"] = $_POST["Tell"];
     $_SESSION["BirthDay"] = $_POST["BirthDay"];
