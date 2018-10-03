@@ -166,9 +166,9 @@ include('DB/session_page7.php');
 					
 
 					<div class="container-login100-form-btn" style="padding-bottom:50px">
-						<button class="login100-form-btn" type="submit">
-										ไปหน้าถัดไป
-						</button>
+                        
+						<button class="login100-form-btn" type="submit"> ไปหน้าถัดไป </button>
+                                
 					</div>
 
 					

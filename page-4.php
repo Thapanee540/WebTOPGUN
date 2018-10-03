@@ -43,7 +43,7 @@
 					<img src="images/tesa.jpg" alt="IMG">
 				</div> -->
 
-				<form class="login100-form validate-form" action="page-5.php" method="POST" >
+				<form class="login100-form validate-form" action="page-5.php" method="POST" enctype="multipart/form-data" >
 					
 					<span class="login101-form-title">
 						ทีม : 
