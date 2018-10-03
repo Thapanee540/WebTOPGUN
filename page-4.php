@@ -254,12 +254,14 @@
 						
 					</table>
 					
-
 					<div class="container-login100-form-btn" style="padding-bottom:50px">
 						<button class="login100-form-btn" type="submit">
 										ไปหน้าถัดไป
 						</button>
 					</div>
+
+					<h6 style="color:#ff0000"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดไปหน้าถัดไป </h6>
+
 
 					
 

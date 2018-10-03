@@ -76,12 +76,16 @@
 					</div>
 
 					<span id="result" ></span>
+					
 
 					<div class="container-login100-form-btn" style="padding-bottom:50px">
 						<button class="login100-form-btn" type="submit" >
 							ยืนยันการสร้างทีม
 						</button>
 					</div>
+
+					<h6 style="color:#ff0000"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดยืนยัน </h6>
+
 
 				</form>
 			</div>
@@ -110,9 +114,9 @@
 <!-- ================= เช็ครหัส ================= -->
 	<script language="Javascript">
 		function confirmPwd() {
-			var pwd = (document.forms["formCreate"]["pass"].value);
+			var pwd = (document.forms["formCreate"]["Team_Pass"].value);
 			var chpwd =(document.forms["formCreate"]["Repass"].value);
-			var count = document.forms["formCreate"]["pass"].value.length;
+			var count = document.forms["formCreate"]["Team_Pass"].value.length;
 			var size = 6;
 
 			if(count < size){
@@ -135,7 +139,7 @@
 
 // <!-- ================= ดูรหัสผ่าน ================= -->
 		function showPassword() {
-    		var showPass = document.getElementById("pass");
+    		var showPass = document.getElementById("Team_Pass");
     		if (showPass.type === "password") {
         		showPass.type = "text";
     		} else {

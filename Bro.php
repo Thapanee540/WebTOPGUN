@@ -33,14 +33,12 @@
 
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="wrap-login101">                
+		<div class="wrap-login100">                
 
-				<form class="login100-form validate-form">
-					<table>
-					    <img src="images/bro.png" alt="Brother" class="bro">
-                    </table>
-                </form>
-                
+				<div style="display: block; margin-left: auto; margin-right: auto; width:70%;">
+					<img style="display: block; margin-left: auto; margin-right: auto; width:80%;" src="images/bro.png" alt="Brother">
+				</div>
+					
 			</div>
 		</div>
 	</div>

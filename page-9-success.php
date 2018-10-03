@@ -1,9 +1,9 @@
 <?php
-    /*session_start();
+    session_start();
     include('DB/session_page8.php');
 
     // include_once("/LoginV1/DB/insert_info.php")."<br>";
-    echo $_SESSION["Team_Name"] ."<br>";
+/*    echo $_SESSION["Team_Name"] ."<br>";
  
     echo "page 3"."<br>";
     echo $_SESSION["Team_Type"] ."<br>";
@@ -58,9 +58,9 @@
     echo $_SESSION["Featured"] ."<br>";
     echo $_SESSION["expectation"] ."<br>";
     echo $_SESSION["knowledge"] ."<br>";
-
+*/
     include("DB/insert_info.php");
-    session_destroy()   */   
+    session_destroy()   
 ?>
 <!DOCTYPE html>
 <html>
@@ -100,19 +100,23 @@
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" >			
 								
+                    <div style="display: block; margin-left: auto; margin-right: auto; width:50%;"> 
+                        <img style="display: block; margin-left: auto; margin-right: auto; width:70%;"  src="images/checked.png"> 
+                    </div>
 
-					<div class="container-login100-form-btn" style="padding-bottom:50px">
+                    <div class="container-login100-form-btn" style="padding-bottom:50px">
+                        <h3 style="padding-bottom:30px; color:#00b300; text-shadow: 0 0 10px #66ff66;"> Successfully !!! </h3><br>
                         
-                        <button class="login100-form-btn" formaction="/Homepage.php"><i class="fa fa-home"></i> ไปหน้าแรก </button>
+                        <button class="login100-form-btn" formaction="../LoginV1/Homepage.php">
+                            <i class="fa fa-home" aria-hidden="true"></i> ...ไปหน้าแรก 
+                        </button>
                                
-					</div>
-				</form>
+                    </div>
+                </form>
+				
 			</div>
 		</div>
 	</div>
-
-
-
 
 	<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -123,11 +127,7 @@
 	<script src="vendor/select2/select2.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script>
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
+	
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
