@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include("conn/conn.php");
+	session_start();
+	// echo $_SESSION['Team_Name'];
+	include('DB/session_page4.php');
+// include("conn/conn.php");
+
 ?>
 <head>
 	<title>ลงทะเบียน TESA TOP GUN</title>
@@ -40,12 +44,12 @@ include("conn/conn.php");
 					<img src="images/tesa.jpg" alt="IMG">
 				</div> -->
 
-				<form class="login100-form validate-form" action="education.php" method="POST" >
+				<form class="login100-form validate-form" action="page-5.php" method="POST" >
 					
 					<span class="login101-form-title">
 						ทีม : 
 						<?php
-							// echo $_POST["Group"];
+							echo $_SESSION["Team_Name"];
 						?>
 					</span>
 
@@ -53,17 +57,15 @@ include("conn/conn.php");
 						<tr>
 							
 							<td>
-								Link (รูปนักศึกษา) : 
+								รูปนักศึกษา (รูปที่เห็นใบหน้าชัดเจน) : 
 							</td>
 								<td>
 									
-									<div class="wrap-input100 validate-input" data-validate="Link : รูปนักศึกษา (จะเป็นรูปติดบัตร หรือรูปประจำตัว facebook ก็ได้ แต่ขอให้เห็นใบหน้าของคุณได้อย่างชัดเจน)">
-										<input class="input100" type="text" name="LinkPic" id="LinkPic" placeholder="https://.........">
+									<div class="wrap-input100 validate-input " data-validate="รูปนักศึกษา (จะเป็นรูปติดบัตร หรือรูปประจำตัว facebook ก็ได้ แต่ขอให้เห็นใบหน้าของคุณได้อย่างชัดเจน)">
+									
+										<!-- <br> -->
+										<input class="" style="padding-left:30px;" type="file" name="Pic" id="Pic">
 								
-										<span class="focus-input100"></span>
-										<span class="symbol-input100">
-										<i class="fa fa-image" aria-hidden="true"></i>
-										</span>
 									</div>
 									
 								</td>
@@ -72,9 +74,9 @@ include("conn/conn.php");
 						<tr>
 							<td>คำนำหน้าชื่อ : </td>
 							<td>
-							<div class="wrap-input100 validate-input" data-validate="กรุณาเลือกจำนวนสมาชิกในกลุ่ม ">
-								<input class="input100" name="University" list="University"  placeholder="กรุณาเลือกคำนำหน้าชื่อ">
-								<datalist id="University">    								
+							<div class="wrap-input100 validate-input" data-validate="กรุณาเลือกคำนำหน้าชื่อ ">
+								<input class="input100" name="Tiltle" list="Tiltle"  placeholder="กรุณาเลือกคำนำหน้าชื่อ">
+								<datalist id="Tiltle">    								
 									 <?php 
 										$read = fopen('titleName.txt','r');
 										while($line = fgets($read)){
@@ -95,7 +97,7 @@ include("conn/conn.php");
 
 								<td>
 									<div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่อ เป็นภาษาไทย">
-										<input class="input100" type="text" name="nameThai" id="nameThai" placeholder="ชื่อ">								
+										<input class="input100" type="text" name="NameThai" id="NameThai" placeholder="ชื่อ">								
 										<span class="focus-input100"></span>										
 									</div> 
 								</td>
@@ -147,7 +149,7 @@ include("conn/conn.php");
 							<td>เบอร์โทรศัพท์มือถือ : </td>
 							<td>								
 								<div class="wrap-input100 validate-input" data-validate="กรุณากรอกเบอร์โทร">
-									<input class="input100" pattern="^0([8|9|6])([0-9]{8}$)" type="text" name="NickName" id="NickName" placeholder="0xx-xxx-xxxx" title="ex. 08xxxxx123">								
+									<input class="input100" pattern="^0([8|9|6])([0-9]{8}$)" type="text" name="Tell" id="Tell" placeholder="0xx-xxx-xxxx" title="ex. 09/06/08xxxxx123">								
 									<span class="focus-input100"></span>										
 								</div> 									
 							</td>		
@@ -169,15 +171,14 @@ include("conn/conn.php");
 							<td>ไซต์เสื้อ : </td>
 							<td>								
 								<div class="wrap-input100 validate-input" data-validate="กรุณากรอกไซต์เสื้อ">
-									<input class="input100" type="text" list="SizeShirt" name="SizeShirt"  placeholder=" xx รอบอก xx นิ้ว">
+									<input class="input100" type="text" list="SizeShirt" name="SizeShirt"  placeholder=" S รอบอก 34  นิ้ว">
 										<datalist id="SizeShirt" >
-											<option value="SS รอบอก xx นิ้ว">
-											<option value="S รอบอก xx นิ้ว">
-											<option value="M รอบอก xx นิ้ว">
-											<option value="L รอบอก xx นิ้ว">
-											<option value="XL รอบอก xx นิ้ว">
-											<option value="XXL รอบอก xx นิ้ว">
-											<option value="XXXL รอบอก xx นิ้ว">
+											<option value="S (รอบอก 34 นิ้ว)">S (รอบอก 34 นิ้ว)</option>
+											<option value="M (รอบอก 36 นิ้ว)">M (รอบอก 36 นิ้ว)</option>
+											<option value="L (รอบอก 40 นิ้ว)">L (รอบอก 40 นิ้ว)</option>
+											<option value="XL (รอบอก 42 นิ้ว)">XL (รอบอก 42 นิ้ว)</option>	
+											<option value="XXL (รอบอก 46 นิ้ว)">XXL (รอบอก 46 นิ้ว)</option>
+											<option value="XXXXL (รอบอก 50 นิ้ว)">XXXXL (รอบอก 50 นิ้ว)</option>
 										</datalist>											
 								</div> 									
 							</td>		
@@ -233,7 +234,7 @@ include("conn/conn.php");
 							<td>ท่านมีพี่ - น้องทั้งหมดกี่คน (รวมตัวท่านด้วย) : </td>
 							<td>								
 								<div class="wrap-input100 validate-input" data-validate="กรุณากรอกจำนวนพี่น้อง เช่น เป็นลูกคนเดียวใส่ '' 1 ''">
-									<input class="input100" min="1" max="15" type="number" name="HowManySisBro" id="HowManySisBro" placeholder="0">								
+									<input class="input100" min="1" max="15" type="number" name="HowManySisBro" id="HowManySisBro" placeholder="1">								
 									<span class="focus-input100"></span>										
 								</div> 									
 							</td>		
@@ -244,7 +245,7 @@ include("conn/conn.php");
 							<td>ท่านเป็นลูกคนเท่าไหร่ : </td>
 							<td>								
 								<div class="wrap-input100 validate-input" data-validate="กรุณากรอกลำดับในครอบครัวของท่าน เช่น เป็นลูกคนเดียว ใส่ '' 1 '' ">
-									<input class="input100" type="number" min="1" max="15" name="YourRank" id="YourRank" placeholder="0">								
+									<input class="input100" type="number" min="1" max="15" name="YourRank" id="YourRank" placeholder="1">								
 									<span class="focus-input100"></span>										
 								</div> 									
 							</td>		

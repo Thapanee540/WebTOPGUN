@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 		// include("DB/checkLogin.php");
-		require_once("DB/checkLogin.php");
+		require_once("DB/login-DB.php");
 	?>
 <head>
 	<title>welcome TESA TOP GUN</title>

@@ -36,12 +36,12 @@ include("conn/conn.php");
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="feelings.php" method="POST" >
+				<form class="login100-form validate-form" action="page-7.php" method="POST">
 					
 					<span class="login101-form-title">
 						ทีม : 
 						<?php
-							// echo $_POST["Group"];
+							echo $_SESSION["Team_Name"];
 						?>
                     </span>
                     
@@ -51,14 +51,14 @@ include("conn/conn.php");
                                 <table>
                                     <tr>
                                         <td class="Table"> 
-                                            <i class="fa fa-star" aria-hidden="true"></i>										        
-                                            บุคคลในดวงใจของคุณคือใคร เพราะอะไร 
+                                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>										        
+                                            วางแผนอนาคตไว้อย่างไร หลังจบปริญญาตรี
                                         </td> 
                                     </tr>							
                                     <tr>
                                         <td> 
-                                            <div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่อบุคคลในดวงใจของคุณคือใคร เพราะอะไร">
-										        <input class="input100" type="text" name="YourIdolWhoWhy" id="YourIdolWhoWhy" placeholder="เช่น พี่ตูน บอดี้สลัม">
+                                            <div class="wrap-input100 validate-input" data-validate="กรุณากรอกอนาคตที่วางแผนไว้ หลังจบปริญญาตรี">
+										        <input class="input100" type="text" name="PlanAfterSchool" id="PlanAfterSchool" placeholder="เช่น จะออกไปแตะขอบฟ้า">
 								
                                             </div>
                                         </td>
@@ -74,14 +74,15 @@ include("conn/conn.php");
                                 <table>
                                     <tr>
                                         <td class="Table"> 
-                                            <i class="fa fa-star" aria-hidden="true"></i>										        
-                                            คติประจำใจของคุณคืออะไร 
+                                            <!-- <i class="fa fa-graduation-cap" aria-hidden="true"></i>-->
+                                            <i class="fa fa-level-up" aria-hidden="true"></i>
+                                            โปรดอธิบายถึงเหตุผลการวางแผนอนาคตของคุณ (จากที่ท่านตอบไว้ข้อก่อนหน้า)
                                         </td> 
                                     </tr>							
                                     <tr>
                                         <td> 
-                                            <div class="wrap-input100 validate-input" data-validate="กรุณากรอกคติประจำใจของคุณ">
-										        <input class="input100" type="text" name="YourMotto" id="YourMotto" placeholder="เช่น อยากเห็นคนไทยบินได้">
+                                            <div class="wrap-input100 validate-input" data-validate="โปรดอธิบายถึงเหตุผลการวางแผนอนาคตของคุณ (จากที่ท่านตอบไว้ข้อก่อนหน้า)">
+										        <input class="input100" type="text" name="ClarifyPlan" id="ClarifyPlan" placeholder="เช่น มีพี่ตูนเป็นไอดอล">
 								
                                             </div>
                                         </td>
@@ -97,16 +98,38 @@ include("conn/conn.php");
                                 <table>
                                     <tr>
                                         <td class="Table"> 
-                                            <i class="fa fa-star" aria-hidden="true"></i>										        
-                                            หากมีปัญหา และอุปสรรคในการทำงาน เราจะมีวิธีการจัดการอย่างไร ยกตัวอย่างประกอบได้
+                                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>										        
+                                            มองอนาคต ฝัน หรือหวังว่าอีก 10 ปีข้างหน้าอย่างไรบ้าง
                                         </td> 
                                     </tr>							
                                     <tr>
                                         <td> 
-                                            <div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่อชื่อมหาวิทยาลัย ที่ท่านกำลังศึกษาอยู่">
-                                                <input class="input100" type="text" id = "HowToManager" name="HowToManager"  placeholder="เช่น เรือเล็กควรออกจากฝั่ง">
+                                            <div class="wrap-input100 validate-input" data-validate="กรุณากรอกอนาคตของคุณที่ฝันไว้ในอีก 10 ปีข้างหน้า">
+                                                <input class="input100" type="text" list="LookFuture" name="LookFuture" id="LookFuture" placeholder="เช่น อยู่บนอวกาศ">
                                                 
 								            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+									
+							</td>
+							
+                        </tr>
+                        
+                        <tr>							
+							<td>
+                                <table>
+                                    <tr>
+                                        <td class="Table"> 
+                                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>										        
+                                            หากได้เป็นนักประดิษฐ์ระดับโลก อยากจะประดิษฐ์ผลงานอะไรเพื่อชาวโลก เพราะอะไร
+                                        </td> 
+                                    </tr>							
+                                    <tr>
+                                        <td> 
+                                            <div class="wrap-input100 validate-input" data-validate="กรุณากรอกตอบคำถาม หากได้เป็นนักประดิษฐ์ระดับโลก อยากจะประดิษฐ์ผลงานอะไรเพื่อชาวโลก เพราะอะไร">
+										        <input class="input100" type="text" name="WorldInvention" id="WorldInvention" placeholder="เช่น ประดิษฐ์รองเท้าที่ใส่วิ่งได้รอบโลกในเสี้ยววินาที">								
+                                            </div>
                                         </td>
                                     </tr>
                                 </table>
@@ -119,7 +142,7 @@ include("conn/conn.php");
 					
 
 					<div class="container-login100-form-btn" style="padding-bottom:50px">
-						<button class="login100-form-btn" type="submit" >
+						<button class="login100-form-btn" type="submit">
 										ไปหน้าถัดไป
 						</button>
 					</div>

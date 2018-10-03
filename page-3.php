@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<?php
-		include("DB/registerTopkan.php");
+	session_start();
+	require_once("DB/createLogin-DB.php");
+	// include('DB/session_info.php');
+	// echo $rows;
+		
 	?>
 
 <head>
@@ -40,7 +44,7 @@
 					<img src="images/tesa.jpg" alt="IMG">
 				</div> -->
 
-				<form class="login100-form validate-form" action="information.php" method="POST">
+				<form class="login100-form validate-form" action="page-4.php" method="POST">
 					<span class="login100-form-title">
 					<!-- <span class="#"> -->
 						ลงทะเบียน TESA TOP GUN Rally 
@@ -49,7 +53,7 @@
 					<span class="login101-form-title">
 						ทีม : 
 						<?php
-							echo $_POST["Team"];
+							echo $_SESSION['Team_Name'];
 						?>
 					</span>
 
@@ -58,8 +62,11 @@
 							<td>ประเภททีม : </td>
 							<td>
 							<div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่อทีม !!! ">
-								<input class="input100" type="text" name="Teamtype" id="Teamtype" placeholder="ประเภททีม">
-								
+								<input class="input100" type="text" list="Team_Type" name="Team_Type" placeholder="แข่งขันจริง / สังเกตการณ์">
+								<datalist id="Team_Type">
+									<option value="แข่งขันจริง">
+									<option value="สังเกตการณ์">
+								</datalist>
 								<span class="focus-input100"></span>
 								<span class="symbol-input100">
 									<i class="fa fa-users" aria-hidden="true"></i>
@@ -118,7 +125,7 @@
 						</tr>
 
 						<tr>
-							<td>E-mail หัวหน้าทีม : </td>
+							<td>E-mail อาจารย์ที่ปรึกษา : </td>
 							<td>
 							<div class="wrap-input100 validate-input" data-validate="กรุณากรอก email หัวหน้าทีม">
 								<input class="input100" type="text" name="Email" id="Email" placeholder="example@example.xyz">
@@ -129,9 +136,25 @@
 								</span>
 							</div> </td>
 						</tr>
+
+                        <tr>
+                            <td> 									        
+                                ท่านประสงค์จะเข้าพักที่ค่ายในวันที่ :
+							</td> 
+                                    
+                            <td> 
+                                <div class="wrap-input100 validate-input" data-validate="กรุณากรอกข้อมูลวันที่ท่านประสงค์เข้าพักที่ค่าย">
+									<input class="input100" type="Date" name="Daystartcamp" id="Daystartcamp" >
+									<span class="focus-input100"></span>
+									<span class="symbol-input100">
+										<i class="fa fa-calendar" aria-hidden="true"></i>
+									</span>
+                                </div>
+                            </td>
+                        </tr>
+                                
 					</table>
 					
-
 					<div class="container-login100-form-btn" style="padding-bottom:50px">
 						<button class="login100-form-btn" type="submit">
 										ไปหน้าถัดไป

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+	session_start();
+?>
 <head>
-	<title>เข้าสู่ระบบ TESA TOP GUN</title>
+	<title>ลงทะเบียน TESA TOP GUN</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -24,6 +26,8 @@
 	<!--===============================================================================================-->
 	<link href="https://fonts.googleapis.com/css?family=Kanit|Prompt" rel="stylesheet">
 </head>
+<style>
+</style>
 
 <body>
 
@@ -31,16 +35,18 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/tesa.jpg" class="Animation" alt="IMG">
+					<img src="images/tesa.jpg" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" method="POST" onsubmit="Javascript:return confirmPwd()" action="welcome.php">
+				<form class="login100-form validate-form" onsubmit="Javascript:return confirmPwd()" action="page-3.php" method="POST" name="formCreate">
 					<span class="login100-form-title">
-						ยินดีต้อนรับ
+						<!-- <span class="#"> -->
+						สร้างทีมของคุณ
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่อทีม !!! ">
-						<input class="input100" type="text" name="Team" id="Team" placeholder="ชื่อทีม">
+						<input class="input100" type="text" name="Team_Name" id="Team_Name" placeholder="ชื่อทีม">
+
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-users" aria-hidden="true"></i>
@@ -48,33 +54,39 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="กรุณากรอกรหัสผ่าน !!! ">
-						<input class="input100" type="password" maxlength="8" name="pass" id="pass" placeholder="รหัสผ่าน">
+						<input class="input100"  maxlength="8" type="password" name="Team_Pass" id="Team_Pass"  placeholder="สร้างรหัสผ่านอย่างน้อย 6 ตัวอักษร">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100" >
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+
+					</div>
+
+					<div class="wrap-input100 validate-input" style="padding-left:30px; font-size: 12px">
+						<input  type="checkbox" onclick="showPassword()" >					
+							   Show Password
+					</div>
+					
+					<div class="wrap-input100 validate-input" data-validate="กรุณากรอกรหัสผ่านอีกครั้ง !!! ">
+						<input class="input100" maxlength="8" type="password" name="Repass" id="Repass"  placeholder="ยืนยันรหัสผ่าน">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
-					
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							เข้าสู่ระบบ
+
+					<span id="result" ></span>
+
+					<div class="container-login100-form-btn" style="padding-bottom:50px">
+						<button class="login100-form-btn" type="submit" >
+							ยืนยันการสร้างทีม
 						</button>
 					</div>
-					
 
-					<div class="text-center p-t-70">
-						<a class="txt2 button-create" href="http://localhost/PI/LoginV1/createlogin.php" >
-							สร้างทีมเพื่อเข้าสู่ระบบ
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-
-
-
 
 	<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -92,18 +104,48 @@
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
-	
-		<script language="Javascript">
+
+	<script src="js/strong.js"></script>
+
+<!-- ================= เช็ครหัส ================= -->
+	<script language="Javascript">
 		function confirmPwd() {
 			var pwd = (document.forms["formCreate"]["pass"].value);
+			var chpwd =(document.forms["formCreate"]["Repass"].value);
 			var count = document.forms["formCreate"]["pass"].value.length;
 			var size = 6;
+
 			if(count < size){
+				alert("กรุณาใส่ password อย่างน้อย 6 ตัวอักษร");
+				return false;
+			}else if(pwd != chpwd){
+				alert("password ไม่ตรงกัน กรุณาใส่ password อีกครั้ง");
+				//return false นั้นทำเพื่อไม่ให้ page วิ่งไปหน้าต่อไปครับ ไม่งั้นจะมี popup ขึ้นมาแจ้งเตือนว่า password ไม่ตรงแต่ก็ยังวิ่งไปหน้าต่อไปครับ
+				// alert(count);
+				return false;
+			}
+		}
+
+		function checkStr(){
+			if(document.forms["formCreate"]["pass"].value.length >= 6){
 				alert("กรุณาใส่ password อย่างน้อย 6 ตัวอักษร");
 				return false;
 			}
 		}
-	</script>
+
+// <!-- ================= ดูรหัสผ่าน ================= -->
+		function showPassword() {
+    		var showPass = document.getElementById("pass");
+    		if (showPass.type === "password") {
+        		showPass.type = "text";
+    		} else {
+        		showPass.type = "password";
+			}
+			return false;
+}
+
+</script>
+
 </body>
 
 </html>

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include("conn/conn.php");
+	session_start();
+	// echo $_SESSION['Team_Name'];
+// include("conn/conn.php");
+    require_once('DB/session_info.php');
+    echo $_SESSION['Team_Type'];
 ?>
 <head>
 	<title>ลงทะเบียน TESA TOP GUN</title>
@@ -36,12 +40,12 @@ include("conn/conn.php");
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="future.php" method="POST">
+				<form class="login100-form validate-form" action="page-6.php" method="POST">
 					
 					<span class="login101-form-title">
 						ทีม : 
 						<?php
-							// echo $_POST["Group"];
+							echo $_SESSION['Team_Name'];
 						?>
                     </span>
                     

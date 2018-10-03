@@ -41,7 +41,7 @@ include("conn/conn.php");
 					<span class="login101-form-title">
 						ทีม : 
 						<?php
-							// echo $_POST["Group"];
+							echo $_SESSION["Team_Name"];
 						?>
                     </span>
                     
