@@ -71,6 +71,17 @@
 							
 						</tr>
 						<tr>
+							<td>Email : </td>
+							<td>								
+								<div class="wrap-input100 validate-input" data-validate="กรุณากรอก email ท่าน เช่น example@example.xyz">
+									<input class="input100" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)" 
+										type="text" name="email-user" id="email-user" placeholder="example@example.xyz" title="ex. example@example.xyz">								
+									<span class="focus-input100"></span>										
+								</div> 									
+							</td>		
+							
+						</tr>
+						<tr>
 							<td>คำนำหน้าชื่อ : </td>
 							<td>
 							<div class="wrap-input100 validate-input" data-validate="กรุณาเลือกคำนำหน้าชื่อ ">
@@ -253,6 +264,7 @@
 
 						
 					</table>
+					<h6 style="color:#ff0000; font-size:"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดยืนยันเนื่องจากท่านไม่สามารถแก้ไขข้อมูลด้วยตนเองได้ หากมีความประสงค์จะแก้ไข แจ้งได้ที่ E-mail: sajjaporn.w@gmail.com </h6>
 					
 					<div class="container-login100-form-btn" style="padding-bottom:50px">
 						<button class="login100-form-btn" type="submit">
@@ -260,12 +272,7 @@
 						</button>
 					</div>
 
-					<h6 style="color:#ff0000"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดไปหน้าถัดไป </h6>
-
-
-					
-
-					
+						
 				</form>
 			</div>
 		</div>
@@ -290,6 +297,10 @@
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
+
+<?php
+	require_once("no_Back.php");
+?>
 
 </body>
 

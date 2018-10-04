@@ -142,22 +142,20 @@
                         
 					</table>
 					
-
+					<h6 style="color:#ff0000; font-size:"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดยืนยันเนื่องจากท่านไม่สามารถแก้ไขข้อมูลด้วยตนเองได้ หากมีความประสงค์จะแก้ไข แจ้งได้ที่ E-mail: sajjaporn.w@gmail.com </h6>
+					
 					<div class="container-login100-form-btn" style="padding-bottom:50px">
 						<button class="login100-form-btn" type="submit">
 										ไปหน้าถัดไป
 						</button>
 					</div>
 
-					<h6 style="color:#ff0000"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดไปหน้าถัดไป </h6>
+					<!-- <h6 style="color:#ff0000"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดไปหน้าถัดไป </h6> -->
 					
 				</form>
 			</div>
 		</div>
 	</div>
-
-
-
 
 	<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -175,7 +173,9 @@
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+<?php
+	require_once("no_Back.php");
+?>
 </body>
 
 </html>

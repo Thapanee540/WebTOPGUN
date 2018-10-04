@@ -14,10 +14,12 @@ include_once("conn/conn.php");
   $Email = $_SESSION["Email"] ;  
   $Daystartcamp = $_SESSION["Daystartcamp"];
   $Pic = $Tiltle = $NameThai = $NameEng = $NickName = $Tell = $BirthDay =  $SizeShirt = $Food = $FoodAllergies = $Province = $HowManySisBro =  $YourRank = "";
+  $emailuser="";
 
   // page 4
   $Pic = $_SESSION["Pic"] ;
   $Tiltle = $_SESSION["Tiltle"] ;
+  $emailuser = $_SESSION["email-user"];
   $NameThai = $_SESSION["NameThai"] ;
   $NameEng = $_SESSION["NameEng"] ;
   $NickName = $_SESSION["NickName"] ;
@@ -96,7 +98,7 @@ VALUES ('$ID_team', '$Team_Type', '$Team_Name', '$University', '$Member', '$Advi
 
 
 $sql_team_info = "INSERT INTO team_info(ID, Team_ID, Pic, Email, Tiltle, NameThai, NameEng, NickName, Tell, BirthDay, SizeShirt, Food, FoodAllergies, Province, HowManySisBro, YourRank, NameSchool, MajorSchool, University, Major, Levels, GPA, SubFavorite, SubUnprofessional, AbilityOutstanding, WhyChoose, PlanAfterSchool, ClarifyPlan, LookFuture, WorldInvention, YourIdolWhoWhy, YourMotto, HowToManager, Feeling, inspiration, Featured, expectation, knowledge) 
-VALUES (NULL,'$ID_team', '$Pic', '$Email', '$Tiltle', '$NameThai', '$NameEng', '$NickName', '$Tell', '$BirthDay', '$SizeShirt', '$Food','$FoodAllergies', '$Province', '$HowManySisBro', '$YourRank', '$NameSchool', '$MajorSchool', '$University', '$Major', '$Level', '$GPA','$SubFavorite', '$SubUnprofessional', '$AbilityOutstanding', '$WhyChoose', '$PlanAfterSchool', '$ClarifyPlan', '$LookFuture','$WorldInvention', '$YourIdolWhoWhy', '$YourMotto', '$HowToManager', '$Feeling', '$inspiration', '$Featured', '$expectation', '$knowledge')";
+VALUES (NULL,'$ID_team', '$Pic', '$emailuser', '$Tiltle', '$NameThai', '$NameEng', '$NickName', '$Tell', '$BirthDay', '$SizeShirt', '$Food','$FoodAllergies', '$Province', '$HowManySisBro', '$YourRank', '$NameSchool', '$MajorSchool', '$University', '$Major', '$Level', '$GPA','$SubFavorite', '$SubUnprofessional', '$AbilityOutstanding', '$WhyChoose', '$PlanAfterSchool', '$ClarifyPlan', '$LookFuture','$WorldInvention', '$YourIdolWhoWhy', '$YourMotto', '$HowToManager', '$Feeling', '$inspiration', '$Featured', '$expectation', '$knowledge')";
 
 
 

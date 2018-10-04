@@ -6,9 +6,12 @@ $Name = $_POST['Name'];
 $Lastname = $_POST['Lastname'];
 }
 
+
 $sql = "SELECT * FROM Datalogin WHERE NameThai = '$Name' or NameEng = '$Name' ";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
+ 
+echo $row['NameThai']."<br>". $row['NameThai']."<br>";
 
 if(($row['NameThai'] != $Name || $row['LastnameThai'] != $Lastname )){
     

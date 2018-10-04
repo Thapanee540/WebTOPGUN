@@ -40,6 +40,7 @@ $rows = mysqli_fetch_array($result);
 //  echo $rows['Team_Name'];
 
 $_SESSION['Team_Name'] = $_POST['Team_Name'];
+$_SESSION['Team_Pass'] = $_POST['Team_Pass'];
 
 mysqli_close($conn);
 
