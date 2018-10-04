@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<?php
-	session_start();
-	require_once("DB/createLogin-DB.php");
+	// session_start();
+	// require_once("DB/createLogin-DB.php");
 	// include('DB/session_page3.php');
 		
 	?>
@@ -52,7 +52,7 @@
 					<span class="login101-form-title">
 						ทีม : 
 						<?php
-							echo $_SESSION['Team_Name'];
+							// echo $_SESSION['Team_Name'];
 						?>
 					</span>
 
@@ -153,9 +153,10 @@
                         </tr>
                                 
 					</table>
-					<h6 style="color:#ff0000; font-size:"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดยืนยันเนื่องจากท่านไม่สามารถแก้ไขข้อมูลด้วยตนเองได้ หากมีความประสงค์จะแก้ไข แจ้งได้ที่ E-mail: sajjaporn.w@gmail.com </h6>
+					<p style="color:#ff0000; "> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดยืนยันเนื่องจากท่านไม่สามารถแก้ไขข้อมูลด้วยตนเองได้ 
+					<br>** หากมีความประสงค์จะแก้ไข แจ้งได้ที่ E-mail: waijanya_s@silpakorn.egu </p>
 					
-					<div class="container-login100-form-btn" style="padding-bottom:50px">
+					<div class="container-login100-form-btn" >
 						<button class="login100-form-btn" type="submit">
 										ไปหน้าถัดไป
 						</button>

@@ -129,13 +129,13 @@
 
 									<td>
 										<div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่อ เป็นภาษาอังกฤษ">
-											<input class="input100" type="text" name="NameEng" id="NameEng" placeholder="Name">								
+											<input class="input100" type="text" name="NameEng" id="NameEng" placeholder="Firstname">								
 											<span class="focus-input100"></span>										
 										</div> 
 									</td>
 									<td>
 										<div class="wrap-input100 validate-input" data-validate="กรุณากรอกนามสกุล เป็นภาษาอังกฤษ">
-											<input class="input100" type="text" name="LastnameEng" id="LastnameEng" placeholder="LastName">								
+											<input class="input100" type="text" name="LastnameEng" id="LastnameEng" placeholder="Surname">								
 											<span class="focus-input100"></span>										
 										</div> 
 									</td>
@@ -170,15 +170,15 @@
 							<td>วัน/เดือน/ปี เกิด : </td>
 							<td>								
 								<div class="wrap-input100 validate-input" data-validate="กรุณากรอกวัน/เดือน/ปี เกิด">
-									<input class="input100" type="Date" name="BirthDay" id="BirthDay" placeholder="ชื่อเล่น">								
+									<input class="input100" type="Date" name="BirthDay" id="BirthDay" placeholder="ชื่อเล่น">
 									<!-- <span class="focus-input100"></span>										 -->
-								</div> 									
+								 </div> 									
 							</td>		
 							
 						</tr>
 
 						<tr>
-							<td>ไซต์เสื้อ : </td>
+							<td>ไซส์เสื้อ(Shirt Size) : </td>
 							<td>								
 								<div class="wrap-input100 validate-input" data-validate="กรุณากรอกไซต์เสื้อ">
 									<input class="input100" type="text" list="SizeShirt" name="SizeShirt"  placeholder=" S รอบอก 34  นิ้ว">
@@ -252,7 +252,7 @@
 						</tr>
 
 						<tr>
-							<td>ท่านเป็นลูกคนเท่าไหร่ : </td>
+							<td>ท่านเป็นลูกคนที่เท่าไหร่ : </td>
 							<td>								
 								<div class="wrap-input100 validate-input" data-validate="กรุณากรอกลำดับในครอบครัวของท่าน เช่น เป็นลูกคนเดียว ใส่ '' 1 '' ">
 									<input class="input100" type="number" min="1" max="15" name="YourRank" id="YourRank" placeholder="1">								
@@ -264,9 +264,10 @@
 
 						
 					</table>
-					<h6 style="color:#ff0000; font-size:"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดยืนยันเนื่องจากท่านไม่สามารถแก้ไขข้อมูลด้วยตนเองได้ หากมีความประสงค์จะแก้ไข แจ้งได้ที่ E-mail: sajjaporn.w@gmail.com </h6>
+					<p style="color:#ff0000; "> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดยืนยันเนื่องจากท่านไม่สามารถแก้ไขข้อมูลด้วยตนเองได้ 
+					<br>** หากมีความประสงค์จะแก้ไข แจ้งได้ที่ E-mail: waijanya_s@silpakorn.egu </p>
 					
-					<div class="container-login100-form-btn" style="padding-bottom:50px">
+					<div class="container-login100-form-btn" >
 						<button class="login100-form-btn" type="submit">
 										ไปหน้าถัดไป
 						</button>

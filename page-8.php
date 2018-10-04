@@ -163,11 +163,10 @@ include('DB/session_page7.php');
                         </tr>
                         
                     </table>
-                    
-					<h6 style="color:#ff0000; font-size:"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดยืนยันเนื่องจากท่านไม่สามารถแก้ไขข้อมูลด้วยตนเองได้ หากมีความประสงค์จะแก้ไข แจ้งได้ที่ E-mail: sajjaporn.w@gmail.com </h6>
+                    <p style="color:#ff0000; "> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดยืนยันเนื่องจากท่านไม่สามารถแก้ไขข้อมูลด้วยตนเองได้ 
+					<br>** หากมีความประสงค์จะแก้ไข แจ้งได้ที่ E-mail: waijanya_s@silpakorn.egu </p>
 					
-
-					<div class="container-login100-form-btn" style="padding-bottom:50px">
+					<div class="container-login100-form-btn">
                         
 						<button class="login100-form-btn" type="submit"> ยืนยันการการกรอกข้อมูล </button>
                                 
@@ -196,7 +195,9 @@ include('DB/session_page7.php');
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+<?php
+	require_once("no_Back.php");
+?>
 </body>
 
 </html>
