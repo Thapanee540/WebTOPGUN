@@ -2,7 +2,8 @@
 <html>
 <?php
 
-    echo "Homepage";
+    // echo "Homepage";
+    require_once("DB/checkLogin.php");
 
 ?>
 <head>
@@ -38,21 +39,113 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" >			
-								
-                    <div style="display: block; margin-left: auto; margin-right: auto; width:50%;"> 
-                        <img style="display: block; margin-left: auto; margin-right: auto; width:70%;"  src="images/checked.png"> 
-                    </div>
-
-                    <div class="container-login100-form-btn" style="padding-bottom:50px">
-                        <h3 style="padding-bottom:30px; color:#00b300; text-shadow: 0 0 10px #66ff66;"> Successfully !!! </h3><br>
+            <form class="login100-form validate-form" action="page-7.php" method="POST">
+					
+					<span class="login101-form-title">
+						ทีม : 
+						<?php
+							echo $_SESSION["Team_Name"];
+						?>
+                    </span>
+                    
+					<table>
+						<tr>							
+							<td>
+                                <table>
+                                    <tr>
+                                        <td class="Table"> 
+                                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>										        
+                                            วางแผนอนาคตไว้อย่างไร หลังจบปริญญาตรี
+                                        </td> 
+                                    </tr>							
+                                    
+                                </table>
+									
+							</td>
+							
+						</tr>
                         
-                        <button class="login100-form-btn" formaction="../LoginV1/Homepage.php">
-                            <i class="fa fa-home" aria-hidden="true"></i> ...ไปหน้าแรก 
-                        </button>
-                               
-                    </div>
-                </form>
+                        <tr>							
+							<td>
+                                <table>
+                                    <tr>
+                                        <td class="Table"> 
+                                            <!-- <i class="fa fa-graduation-cap" aria-hidden="true"></i>-->
+                                            <i class="fa fa-level-up" aria-hidden="true"></i>
+                                            โปรดอธิบายถึงเหตุผลการวางแผนอนาคตของคุณ (จากที่ท่านตอบไว้ข้อก่อนหน้า)
+                                        </td> 
+                                    </tr>							
+                                    <tr>
+                                        <td> 
+                                            <div class="wrap-input100 validate-input" data-validate="โปรดอธิบายถึงเหตุผลการวางแผนอนาคตของคุณ (จากที่ท่านตอบไว้ข้อก่อนหน้า)">
+										        <input class="input100" type="text" name="ClarifyPlan" id="ClarifyPlan" placeholder="เช่น มีพี่ตูนเป็นไอดอล">
+								
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+									
+							</td>
+							
+                        </tr>
+                        
+                        <tr>							
+							<td>
+                                <table>
+                                    <tr>
+                                        <td class="Table"> 
+                                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>										        
+                                            มองอนาคต ฝัน หรือหวังว่าอีก 10 ปีข้างหน้าอย่างไรบ้าง
+                                        </td> 
+                                    </tr>							
+                                    <tr>
+                                        <td> 
+                                            <div class="wrap-input100 validate-input" data-validate="กรุณากรอกอนาคตของคุณที่ฝันไว้ในอีก 10 ปีข้างหน้า">
+                                                <input class="input100" type="text" list="LookFuture" name="LookFuture" id="LookFuture" placeholder="เช่น อยู่บนอวกาศ">
+                                                
+								            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+									
+							</td>
+							
+                        </tr>
+                        
+                        <tr>							
+							<td>
+                                <table>
+                                    <tr>
+                                        <td class="Table"> 
+                                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>										        
+                                            หากได้เป็นนักประดิษฐ์ระดับโลก อยากจะประดิษฐ์ผลงานอะไรเพื่อชาวโลก เพราะอะไร
+                                        </td> 
+                                    </tr>							
+                                    <tr>
+                                        <td> 
+                                            <div class="wrap-input100 validate-input" data-validate="กรุณากรอกตอบคำถาม หากได้เป็นนักประดิษฐ์ระดับโลก อยากจะประดิษฐ์ผลงานอะไรเพื่อชาวโลก เพราะอะไร">
+										        <input class="input100" type="text" name="WorldInvention" id="WorldInvention" placeholder="เช่น ประดิษฐ์รองเท้าที่ใส่วิ่งได้รอบโลกในเสี้ยววินาที">								
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+									
+							</td>
+							
+                        </tr>
+                        
+					</table>
+					
+
+					<div class="container-login100-form-btn" style="padding-bottom:50px">
+						<button class="login100-form-btn" type="submit">
+										ไปหน้าถัดไป
+						</button>
+					</div>
+
+					<h6 style="color:#ff0000"> * ตรวจสอบข้อมูลของท่านให้ถูกต้องก่อนกดไปหน้าถัดไป </h6>
+					
+				</form>
 				
 			</div>
 		</div>

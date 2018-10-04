@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 	session_start();
-	// echo $_SESSION['Team_Name'];
+	// echo $_SESSION['Email'];
 	include('DB/session_page3.php');
 
 ?>

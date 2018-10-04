@@ -31,16 +31,16 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/tesa.jpg" class="Animation" alt="IMG">
+					<img src="images/tesa.jpg" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" method="POST" onsubmit="Javascript:return confirmPwd()" action="welcome.php">
+				<form class="login100-form validate-form" method="POST" onsubmit="Javascript:return confirmPwd()" action="Homepage.php">
 					<span class="login100-form-title">
 						ยินดีต้อนรับ
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="กรุณากรอกชื่อทีม !!! ">
-						<input class="input100" type="text" name="Team" id="Team" placeholder="ชื่อทีม">
+						<input class="input100" type="text" name="Team_Name" id="Team_Name" placeholder="ชื่อทีม">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-users" aria-hidden="true"></i>
@@ -48,7 +48,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="กรุณากรอกรหัสผ่าน !!! ">
-						<input class="input100" type="password" maxlength="8" name="pass" id="pass" placeholder="รหัสผ่าน">
+						<input class="input100" type="password" maxlength="8" name="Team_Pass" id="Team_Pass" placeholder="รหัสผ่าน">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -95,8 +95,8 @@
 	
 		<script language="Javascript">
 		function confirmPwd() {
-			var pwd = (document.forms["formCreate"]["pass"].value);
-			var count = document.forms["formCreate"]["pass"].value.length;
+			var pwd = (document.forms["formCreate"]["Team_pass"].value);
+			var count = document.forms["formCreate"]["Team_pass"].value.length;
 			var size = 6;
 			if(count < size){
 				alert("กรุณาใส่ password อย่างน้อย 6 ตัวอักษร");

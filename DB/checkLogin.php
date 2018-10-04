@@ -2,8 +2,8 @@
 include("conn/conn.php");
 
 if ($_SERVER['REQUEST_METHOD']=='POST'){
-$Team = $_POST['Team_Name'];
-$Password = $_POST['Team_Pass'];
+$Team_Name = $_POST['Team_Name'];
+$Team_Pass = $_POST['Team_Pass'];
 }
 
 // $sql = "SELECT * FROM registertopkan WHERE Team = '$Team' ";
@@ -13,13 +13,13 @@ $Password = $_POST['Team_Pass'];
 
 
 
-$sql = "SELECT * FROM team_login WHERE Team_Name = '$Team' ";
+$sql = "SELECT * FROM team_login WHERE Team_Name = '$Team_Name' ";
 $result = mysqli_query($conn, $sql);
 // $row = mysqli_fetch_assoc($result);
 $row = mysqli_fetch_array($result);
 $passDB = $row['Team_Pass'];
 
-if(!($row['Team_Name'] == $Team && password_verify($Password, $passDB))){
+if(!($row['Team_Name'] == $Team_Name && password_verify($Team_Pass, $passDB))){
     
     echo "<script>";
         echo "alert(\" user หรือ  password ไม่ถูกต้อง\");"; 

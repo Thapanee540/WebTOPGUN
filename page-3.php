@@ -126,8 +126,8 @@
 						<tr>
 							<td>E-mail อาจารย์ที่ปรึกษา : </td>
 							<td>
-							<div class="wrap-input100 validate-input" data-validate="กรุณากรอก email หัวหน้าทีม">
-								<input class="input100" type="text" name="Email" id="Email" placeholder="example@example.xyz">
+							<div class="wrap-input100 validate-input" data-validate="กรุณากรอก email หัวหน้าทีม เช่น example@example.xyz">
+								<input class="input100" type="text" name="email" id="Email" placeholder="example@example.xyz">
 								
 								<span class="focus-input100"></span>
 								<span class="symbol-input100">
@@ -188,6 +188,7 @@
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
+
 
 </body>
 
